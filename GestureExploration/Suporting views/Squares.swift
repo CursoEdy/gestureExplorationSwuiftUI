@@ -18,9 +18,9 @@ struct Squares: View {
     var body: some View {
         
         Grid {
-            SquareRow(colors: [.red, .blue, .green, .yellow])
-            SquareRow(colors: [.red, .blue, .green, .yellow])
-            SquareRow(colors: [.red, .blue, .green, .yellow])
+            SquareRow(colors: [.red, .blue, .brown] )
+            SquareRow(colors: [.cyan, .black, .green])
+            SquareRow(colors: [.yellow, .purple, .pink])
         }
         .opacity(opacity)
     }
