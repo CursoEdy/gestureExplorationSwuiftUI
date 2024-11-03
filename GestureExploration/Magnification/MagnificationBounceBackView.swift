@@ -7,16 +7,19 @@
 
 import SwiftUI
 
-struct MagnificationBounceView: View {
+struct MagnificationBounceBackView: View {
     
     @State private var scaleEfect: CGFloat = 1.5
     
     var body: some View {
-        NavigationStack {
             VStack {
                 Spacer()
                 
-                NiceTextView(text: "Hello, world!", bgColor: .blue, fgColor: .white, radius: 10)
+                NiceTextView(
+                    text: "Hello, world!",
+                    bgColor: .blue,
+                    fgColor: .white,
+                    radius: 10)
                     .scaleEffect(scaleEfect)
                     .gesture(
                         MagnificationGesture()
@@ -35,13 +38,12 @@ struct MagnificationBounceView: View {
                 
                 Spacer()
             }
-            .navigationTitle("Magnification Bounce")
+            .navigationTitle("Magnify and Bounce Back")
             .navigationBarTitleDisplayMode(.inline)
-        }
         
     }
 }
 
 #Preview {
-    MagnificationBounceView()
+    MagnificationBounceBackView()
 }

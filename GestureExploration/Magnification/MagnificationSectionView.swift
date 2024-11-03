@@ -8,20 +8,23 @@
 import SwiftUI
 
 struct MagnificationSectionView: View {
+    
+    @State private var scaleEffect: CGFloat = 1.0
+    
     var body: some View {
         
         Section(content: {
             
             NavigationLink(#"Magnification Gesture "Go back""#, destination: {
-                Text("Exemplo 02")
+                MagnificationBounceBackView()
             })
             
             NavigationLink(#"Magnification Gesture "Stay Still""#, destination: {
-                Text("Exemplo 01")
+                MagnificationStayStillView()
             })
             
             NavigationLink(destination: {
-                Text("Exemplo 03")
+                MagnificationStoreStateView(scaleEfect: $scaleEffect)
             }, label: {
                 VStack (alignment: .leading) {
                     Text("Magnification Gesture")
